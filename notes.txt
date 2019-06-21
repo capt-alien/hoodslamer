@@ -37,3 +37,7 @@ Plan of attack:
     3) add SECURITY features
     4) set up user models
     5) write global tests
+
+
+ISSUES:
+1) Having problems selecting only one wrestler
