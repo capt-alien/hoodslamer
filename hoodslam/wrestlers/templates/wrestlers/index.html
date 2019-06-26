@@ -1,0 +1,13 @@
+<!-- //how do I make this into my own index tempate view -->
+
+{% if latest_wrestlers_list %}
+    <ul>
+    {% for wrestler in latest_wrestlers_list %}
+        <li><h1><a href="/wrestlers/{{ wrestler.id }}">{{ wrestler.name }}</a><h1></li>
+        <h2>{{ wrestler.nickname }}</h2>
+        <p>{{ wrestler.bio }}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No wrestlers available!</p>
+{% endif %}

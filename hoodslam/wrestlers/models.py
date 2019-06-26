@@ -35,6 +35,9 @@ class Match(models.Model):
     winners = models.ManyToManyField(Wrestler, blank=True, related_name="winners") #,choices=wrestlers)
     losers = models.ManyToManyField(Wrestler, blank=True, related_name="losers") #,choices=wrestlers)
 
+
+#Django signals (when this happens call this just hoook into a function)
+# https://docs.djangoproject.com/en/2.2/ref/signals/   django signals post_save
     def update_stats(self):
         """This method will automatically go through the
             winners and loosers and update the stats of the
