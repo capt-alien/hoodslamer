@@ -2,9 +2,11 @@
 
 {% if latest_wrestlers_list %}
     <ul>
+        <h1>Wrestlers: </h1>
     {% for wrestler in latest_wrestlers_list %}
-        <li><h1><a href="{% url 'wrestler-details' wrestler.name %}">{{ wrestler.name }}</a><h1></li>
-        <h2>{{ wrestler.nickname }}</h2>
+
+        <li><h2><a href="{% url 'wrestler-details' wrestler.name %}">{{ wrestler.name }}</a><h2></li>
+        <h3>{{ wrestler.nickname }}</h3>
         <p>{{ wrestler.bio }}</p>
     {% endfor %}
     </ul>

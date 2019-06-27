@@ -1,0 +1,13 @@
+<!-- Get this to do a jston that I can referance with html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Match: </title>{% endblock %}
+</head>
+<body>
+  {% block sidebar %}<h1>Match Number:  {{Match.id}}</h1>{% endblock %}
+  {% block sidebar %}<h1>{{Match.wrestlers}}</h1>{% endblock %}
+  <!-- {% block sidebar %}<h2>{{Match.wrestlers}}</h2>{% endblock %} -->
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>

@@ -1,14 +1,15 @@
 Plan of attack:
 
 Needs:
-1) Homepage with Blog API
+- Homepage with Blog API
+-Auto Updates on wrestlers after they win/lose
+-Event API.
+-Navbar
+-Merch Store.
+-Some sort of API
+-tests
+- images
 
-2) Auto Updates on wrestlers after they win/lose
-
-3) Event API.
-
-4) Merch Store.
-
-5) Some sort of API
-
-6) tests
+need help from Dani:
+- Match html page vs
+- is there an events API?
