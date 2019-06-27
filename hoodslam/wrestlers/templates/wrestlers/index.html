@@ -3,7 +3,7 @@
 {% if latest_wrestlers_list %}
     <ul>
     {% for wrestler in latest_wrestlers_list %}
-        <li><h1><a href="/wrestlers/{{ wrestler.id }}">{{ wrestler.name }}</a><h1></li>
+        <li><h1><a href="{% url 'wrestler-details' wrestler.name %}">{{ wrestler.name }}</a><h1></li>
         <h2>{{ wrestler.nickname }}</h2>
         <p>{{ wrestler.bio }}</p>
     {% endfor %}

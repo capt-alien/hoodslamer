@@ -11,10 +11,7 @@ def index(request):
     return render(request, 'wrestlers/index.html', context )
 
 def detail(request, name):
-    try:
-        wrestler = Wrestler.objects.get(pk= name)
-    except Wrestler.DoesNotExist:
-        raise http404("Wrestler does not exist")
+    wrestler = get_object_or_404(Wrestler, name=name)
     return render(request, 'wrestlers/detail.html', {'Wrestler': wrestler})
 
 

@@ -1,43 +1,14 @@
 Plan of attack:
 
-1) create project
-    landing page?
-    user?
+Needs:
+1) Homepage with Blog API
 
-2) create wrestler app
-    define model
-    write tests
-    connect app to project
-    create frontend
-    pass tests
+2) Auto Updates on wrestlers after they win/lose
 
-3) create match app
-    define model
-    write tests
-    connect app to project
-    create relation to wrestler app
-    create frontend
-    pass tests
+3) Event API.
 
+4) Merch Store.
 
-4) create event app
-    define model
-    write tests
-    find event management API
-    connect app to project
-    create relation to match app
-    create relation to wrestler app
-    create frontend
-    pass tests
+5) Some sort of API
 
-
-5) Polish everything:
-    1) add serializer API
-    2) customize admin pages
-    3) add SECURITY features
-    4) set up user models
-    5) write global tests
-
-
-ISSUES:
-1) Having problems selecting only one wrestler
+6) tests
