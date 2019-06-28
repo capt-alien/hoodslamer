@@ -12,9 +12,9 @@ def index(request):
 
 def detail(request, name):
     wrestler = get_object_or_404(Wrestler, name=name)
-    return render(request, 'wrestlers/detail.html', {'Wrestler': wrestler})
+    return render(request, 'wrestlers/detail.html', {'wrestler': wrestler})
 
 def match(request, id):
     #pull fighters from the match and displays a page with the
     match = get_object_or_404(Match, id = id)
-    return render(request, 'wrestlers/match.html', {'Match': match})
+    return render(request, 'wrestlers/match.html', {'match': match})

@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.signals import post_save
+from django.db.models.signals import m2m_changed
 
 # Create your models here.
 class Wrestler(models.Model):
@@ -37,28 +37,30 @@ class Match(models.Model):
     losers = models.ManyToManyField(Wrestler, blank=True, related_name="losers") #,choices=wrestlers)
     #post_save -->
 
-def update_stats(sender, **kwargs):
+def update_stats(sender, instance, created, **kwargs):
     """This method will automatically go through the
         winners and loosers and update the stats of the
         wrestlers in the db"""
-    if kwargs['created']:
-        for winner in sender.winners:
+    if created:
+        print(instance.winners.all())
+        for winner in instance.winners.all():
+            print(f'winner.name: {winner.name}')
             #find object in db
-            new_win = Wrestler.objects.filter(name=winner)
+            new_win = Wrestler.objects.filter(name=winner.name)
             #update wins
-            new_win.wins += 1
+            new_win.wins = new_win.wins + 1
             new_win.save()
-        for loser in sender.loosers:
+        for loser in instance.losers.all():
             #find object in db
-            new_loss = Wrestler.objects.filter(name=loser)
+            new_loss = Wrestler.objects.filter(name=loser.name)
             #update wins
-            new_loss.losses += 1
+            new_loss.losses = new_loss.losses + 1
             new_loss.save()
         return {'message': "Wins/losses recorded"}
 
 
-#signal code
-post_save.connect(update_stats, sender=Match)
+#signal
+m2m_changed.connect(update_stats, sender=Match)
 
 
 #Django signals (when this happens call this just hoook into a function)
