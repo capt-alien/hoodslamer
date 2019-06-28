@@ -2,12 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% block title %}<title>Match: </title>{% endblock %}
+  {% block title %}<title>Match: {{match.id}}</title>{% endblock %}
 </head>
 <body>
-  {% block sidebar %}<h1>Match Number:  {{Match.id}}</h1>{% endblock %}
-  {% block sidebar %}<h1>{{Match.wrestlers}}</h1>{% endblock %}
-  <!-- {% block sidebar %}<h2>{{Match.wrestlers}}</h2>{% endblock %} -->
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  {% block content %}
+
+  <h1>Match Number:  {{match.id}}</h1>
+<h2>{{match.wrestlers}}</h2>
+
+
+
+  {% endblock %}
+
+
 </body>
 </html>
