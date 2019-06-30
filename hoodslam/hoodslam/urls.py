@@ -18,5 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('wrestlers/', include('wrestlers.urls')),
+    path('events/', include('events.urls')),
     path('admin/', admin.site.urls),
+    # path('match/<int:id>', views.match, name='match'),
+
 ]

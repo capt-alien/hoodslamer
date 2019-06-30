@@ -24,12 +24,3 @@ class Wrestler(models.Model):
 
     def __str__(self):
         return self.name
-
-class Match(models.Model):
-    date = models.DateField()
-    # event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    wrestlers = models.ManyToManyField(Wrestler)
-    summary = models.CharField(max_length=200, blank=True, null=True)
-    outcome = models.CharField(max_length=200, blank=True, null=True)
-    winners = models.ManyToManyField(Wrestler, blank=True, related_name="winners") #,choices=wrestlers)
-    losers = models.ManyToManyField(Wrestler, blank=True, related_name="losers") #,choices=wrestlers)

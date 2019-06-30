@@ -3,7 +3,7 @@ from django.http import HttpResponse, Http404
 # from django.template import loader
 
 # Create your views here.
-from .models import Wrestler, Match
+from .models import Wrestler
 
 def index(request):
     latest_wrestlers_list = Wrestler.objects.order_by('wins')[:10]
@@ -13,8 +13,3 @@ def index(request):
 def detail(request, name):
     wrestler = get_object_or_404(Wrestler, name=name)
     return render(request, 'wrestlers/detail.html', {'wrestler': wrestler})
-
-def match(request, id):
-    #pull fighters from the match and displays a page with the
-    match = get_object_or_404(Match, id = id)
-    return render(request, 'wrestlers/match.html', {'match': match})
