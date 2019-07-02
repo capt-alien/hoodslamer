@@ -5,7 +5,8 @@ from wrestlers.models import Wrestler
 
 
 class Match(models.Model):
-    """This is the model for the individual matches"""
+    """This is the model for the individual matches, where one or more
+        wrestler wrestle in the ring."""
     date = models.DateField()
     wrestlers = models.ManyToManyField(Wrestler)
     summary = models.CharField(max_length=200, blank=True, null=True)
@@ -15,7 +16,7 @@ class Match(models.Model):
 
 
 class Event(models.Model):
-    """Model for the events """
+    """Model for the events. Should be connected to a few matches"""
     LEAUGES = (
         ('HS', 'Hoodslam'),
         ('GLAM', 'Guilty Leathal Action Mayham'),

@@ -1,0 +1,17 @@
+<!-- Template for Events detail needs immages and to loop over Matches
+    and wrestlers.  -->
+
+<h1><label>Title: </label> {{ event.title }}</h1>
+<h2><label>Leauge: </label>{{ event.leauge }}</h2>
+<h3><label> Date: </label> {{ event.date }}</h3>
+<h3><label>Location: </label> {{ event.location }}</h3>
+{% for match in event.matches.all %}
+    <p>
+        <label>Round: </label>
+        {% for wrestler in match.wrestlers.all %}
+            {{ wrestler.name }}
+        {% endfor %}
+     </p>
+{% empty %}
+    <p>No matches yet!</p>
+{% endfor %}

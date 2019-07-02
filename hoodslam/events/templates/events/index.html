@@ -7,7 +7,7 @@
         <h1>Events: </h1>
     {% for event in upcoming_events %}
 
-        <!-- <li><h2><a href="{% url 'event-details' event.upcoming_events %}">{{ event.upcoming_events }}</a><h2></li> -->
+        <li><h2><a href="{% url 'event-details' event.id %}">{{ event.title }}</a><h2></li>
         <h3>{{ event.date }}</h3>
     {% endfor %}
     </ul>
