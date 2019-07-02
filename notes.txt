@@ -1,10 +1,8 @@
 Plan of attack:
 
 TODO:
-listview templates
 update docs
-test
-migrate DB to posgres 
+migrate DB to posgres
 deploy
 
 
