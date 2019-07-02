@@ -1,22 +1,12 @@
 Plan of attack:
 
-Needs:
-- Homepage with Blog API
--Auto Updates on wrestlers after they win/lose
--Event API.
--Navbar
--Merch Store.
--Some sort of API
--tests
-- images
-
-
-need help from Dani:
-- get the signal thing to work
-- is there an events API?
-
-fix update on UI
-1) maniuplate it through werstlers
+TODO:
+deploy Django rest Framework
+listview templates
+update docs
+test
+update docs
+deploy
 
 
 rubric:

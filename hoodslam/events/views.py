@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 
+from .models import Event, Match
+
 # Create your views here.
 def index(request):
-    upcoming_events = Events.objects.order_by('date')[:10]
-    context = {'upcoming_events':upcoming_events }
-    return render(request, 'events/index.html',context)
+    upcoming_events = Event.objects.order_by('date')[:10]
+    context = {'upcoming_events': upcoming_events}
+    return render(request, 'events/index.html', context)
 
 def match(request, id):
     #pull fighters from the match and displays a page with the
