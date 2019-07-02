@@ -5,7 +5,7 @@ from django.utils import timezone
 
 from .models import Event, Match
 
-class eventModelTests(TestCase):
+class EventModelTests(TestCase):
 
     def test_was_published_recently_with_future_event(self):
         """
@@ -33,31 +33,3 @@ class eventModelTests(TestCase):
         time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_event = Event(date=time)
         self.assertIs(recent_event.was_published_recently(), True)
-
-#
-#
-# # Create your tests here.
-# class Test_Event_Class(TestCase):
-#
-#     def test_get_event():
-#         """create new event"""
-#         pass
-#
-#     def test_default_location():
-#         # assert testEvent.location == 'Oakland Metro Oprah House'
-#         # assert testEvent.loaction != 'Berkley'
-#         pass
-#
-#     def test_delete_event():
-#         pass
-#
-#
-# class Test_Match_Class(TestCase):
-#     def test_create_match():
-#         pass
-#
-#     def test_no_default_win():
-#         pass
-#
-#     def test_no_default_loss():
-#         pass
