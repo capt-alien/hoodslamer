@@ -6,12 +6,6 @@ from django.views import generic
 
 from .models import Event, Match
 
-# Create your views here.
-# def index(request):
-#     upcoming_events = Event.objects.order_by('date')[:10]
-#     context = {'upcoming_events': upcoming_events}
-#     return render(request, 'events/index.html', context)
-
 class IndexView(generic.ListView):
     template_name = 'events/index.html'
     context_object_name = 'upcoming_events'

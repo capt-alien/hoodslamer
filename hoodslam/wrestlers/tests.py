@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from .model import Wrestler, Match
+from .model import Wrestler
 
 # Create your tests here.
 # create test wrestler X2
@@ -31,6 +31,3 @@ class Test_wrestler(unitest):
 
     def test_wrestler_delete(self):
         pass
-
-class Test_Matches(Unitest):
-    pass

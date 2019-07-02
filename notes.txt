@@ -1,11 +1,10 @@
 Plan of attack:
 
 TODO:
-deploy Django rest Framework
 listview templates
 update docs
 test
-update docs
+migrate DB to posgres 
 deploy
 
 
