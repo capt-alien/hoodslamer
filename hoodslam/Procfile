@@ -1,1 +1,1 @@
-web: gunicorn hoodslamer:app
+web: gunicorn hoodslam.wsgi --log-file -

@@ -14,6 +14,7 @@ import os
 
 import dj_database_url
 import dotenv
+# import djangorestframework
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,15 +39,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework',
-    'wrestlers.apps.WrestlersConfig',
-    'events.apps.EventsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'wrestlers.apps.WrestlersConfig',
+    'events.apps.EventsConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,8 +139,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# # This should already be in your settings.py
-# django_heroku.settings(locals())
-# # This is new
-# del DATABASES['default']['OPTIONS']['sslmode']
