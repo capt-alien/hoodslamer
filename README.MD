@@ -1,5 +1,7 @@
 # hoodslamer
 
+live site here: https://hoodslamer.herokuapp.com/
+
 This project will create a website with multiple applications that I could, in turn, give to Hoodslam in exchange for a permanent guest list status at their events and a teeshirt. This website will have a minimum of three internal apps and possibly a 3rd party application that will allow comments to be made on a particular match by the two contestants.
 
 2 Apps:
