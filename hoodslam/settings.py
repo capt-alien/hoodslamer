@@ -33,7 +33,7 @@ SECRET_KEY = '%s#$#_vji#i*_hirnqnzlc-@(2be8%7q3#f40algzg71x)-9f*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'hoodslamer.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
